@@ -6,8 +6,8 @@ const AddToFavorite = () => {
   const { favorites, addToFavorites, removeFromFavorites } =
     useContext(FavoriteContext);
   const { weatherData } = useContext(WeatherContext);
-  const [isFavorite, setIsFavorite] = useState(false);
   const { latitude, longitude, location } = weatherData;
+  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     const found = favorites.find((fav) => fav.location === location);
